@@ -14,7 +14,7 @@ myAge += 1
 console.log(myAge)
 
 let canVote: boolean = true
-canVote = false
+canVote = !canVote
 
 
 
@@ -52,3 +52,18 @@ driverLicensed = !driverLicensed
 
 console.log(driverLicensed)
 
+
+
+// Unions types in TypeScript
+
+ let tax : number | string = 10
+
+ tax = "Ten percent"
+
+console.log(tax)
+
+let serverRequest : "pending" | "success" | "error" = "pending"
+
+serverRequest = "success"
+
+console.log(serverRequest)
