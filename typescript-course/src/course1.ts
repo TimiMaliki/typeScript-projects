@@ -67,3 +67,12 @@ let serverRequest : "pending" | "success" | "error" = "pending"
 serverRequest = "success"
 
 console.log(serverRequest)
+
+
+// Any type in TypeScript
+
+let randomValue: any = 10
+randomValue = randomValue = true
+randomValue = randomValue = "random"
+
+// Challenge
