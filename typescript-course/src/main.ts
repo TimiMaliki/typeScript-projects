@@ -3,6 +3,8 @@ import typescriptLogo from './typescript.svg'
 import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.ts'
 import './course1.ts'
+import './course2.ts'
+import './course3.ts'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
