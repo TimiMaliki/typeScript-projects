@@ -30,3 +30,10 @@ console.log(result2)
 let result3 = isNamesInTheArray("Alice")
 
 console.log(result3)
+
+function calculateSum  (a:number, b?:number) :number {
+   return a-(b || 0 )
+}
+
+ let minus = calculateSum(10)
+    console.log(minus)
