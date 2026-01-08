@@ -61,16 +61,41 @@ function setTheme(t: Theme) {
 setTheme('dark'); // This will set the theme to 'dark'
 
 
-type Employee = {id:number , name : "string" , employee :["john,susan,anna"]}
+// type Employee = {id:number , name : "string" , employee :["john,susan,anna"]}
 
-type Manager = {id:number , name : "string" , employee:["john,susan,anna"]}
+// type Manager = {id:number , name : "string" , employee:["john,susan,anna"]}
 
-type Staff = Employee | Manager
+// type Staff = Employee | Manager
 
-const printStaffDetails = (staff : Staff):void => {
- if("employee" in staff){
-   console.log(`The person is a manager ${staff.employee.length}`);
- }
+// const printStaffDetails = (staff : Staff):void => {
+//  if("employee" in staff){
+//    console.log(`The person is a manager ${staff.employee.length}`);
+//  }
+// }
+
+// console.log(printStaffDetails("john"))
+
+
+type Employee = { id: number; name: string; department: string };
+type Manager = { id: number; name: string; employees: Employee[] };
+
+type Staff = Employee | Manager;
+
+function printStaffDetails(staff: Staff) {
+  if ('employees' in staff) {
+    console.log(
+      `${staff.name} is a manager of ${staff.employees.length} employees.`
+    );
+  } else {
+    console.log(
+      `${staff.name} is an employee in the ${staff.department} department.`
+    );
+  }
 }
 
-console.log(printStaffDetails("john"))
+const alice: Employee = { id: 1, name: 'Alice', department: 'Sales' };
+const steve: Employee = { id: 1, name: 'Steve', department: 'HR' };
+const bob: Manager = { id: 2, name: 'Bob', employees: [alice, steve] };
+
+printStaffDetails(alice); // Outputs: Alice is an employee in the Sales department.
+printStaffDetails(bob);
