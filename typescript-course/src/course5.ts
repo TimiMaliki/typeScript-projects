@@ -50,3 +50,26 @@ const result = deepWork.printTitle('is an awesome book');
 console.log(result);
 
 
+interface Computer{
+    readonly id:number;
+    brand:string;
+    ram:number;
+    storage?:string;
+    upgradeRam(ramUpgrade:number):number
+}
+
+
+const dellLaptop : Computer = {
+    id:1,
+    brand:"Dell",
+    ram:8,
+    storage:"256GB",
+    upgradeRam(ramUpgrade){
+   this.ram += ramUpgrade;
+   return this.ram;
+    }
+}
+
+const dellResult = dellLaptop.upgradeRam(163);
+
+console.log(dellResult)
