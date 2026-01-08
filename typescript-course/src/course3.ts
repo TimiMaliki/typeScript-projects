@@ -39,6 +39,12 @@ function calculateSum  (a:number, b?:number) :number {
     console.log(minus)
 
 
+    // challenge
+    // Write a function processInput that takes a parameter input which can be either a string or a number.
+    // If the input is a number, the function should return the number multiplied by 2.
+    // If the input is a string, the function should return the string converted to uppercase.
+    // Demonstrate the function with both types of inputs.
+
 
     function processInput(input: (string | number))  {
         if(typeof input === "number"){
