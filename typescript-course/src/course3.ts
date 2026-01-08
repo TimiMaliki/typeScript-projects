@@ -37,3 +37,19 @@ function calculateSum  (a:number, b?:number) :number {
 
  let minus = calculateSum(10)
     console.log(minus)
+
+
+
+    function processInput(input: (string | number))  {
+        if(typeof input === "number"){
+            return input * 2
+        }
+        else{
+            return input.toUpperCase()
+        }
+    }
+
+
+    let resultInput = processInput("akaza")
+
+    console.log(resultInput)
