@@ -59,3 +59,48 @@ function calculateSum  (a:number, b?:number) :number {
     let resultInput = processInput("akaza")
 
     console.log(resultInput)
+
+
+
+// Functions - Using Objects as Function Parameters
+
+ function createEmployee({ id }: { id: number }): {
+  id: number;
+  isActive: boolean;
+} {
+  return { id, isActive: id % 2 === 0 };
+}
+
+const first = createEmployee({ id: 1 });
+const second = createEmployee({ id: 2 });
+console.log(first, second);
+
+// alternative
+
+function createStudent(student: { id: number; name: string }) {
+  console.log(`Welcome to the course ${student.name.toUpperCase()}!!!`);
+}
+
+const newStudent = {
+  id: 5,
+  name: 'anna',
+};
+
+createStudent(newStudent);
+
+
+// Challenge
+
+const processData = (input: string | number , config:{reverse:boolean}={reverse:false}):string | number => {
+if (typeof input === "number"){
+    return Math.sqrt(input);
+}
+
+else{config.reverse === true && typeof input === "string"
+     return input.split("").reverse().join("").toUpperCase()
+}
+}
+
+console.log(processData(10))
+console.log(processData("Hello"))
+console.log(processData("Yes", {reverse:true}))
