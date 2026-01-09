@@ -139,3 +139,4 @@ const manager: Manager = {
     console.log('Managing people...');
   },
 };
+
