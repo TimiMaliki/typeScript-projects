@@ -39,3 +39,34 @@ function getEmployee(): Person | DogOwner | Manager{
 
 const employee1 : Person | DogOwner | Manager = getEmployee()
 console.log(employee1)
+
+
+// Tuples in TypeScript
+
+let tuple1:[string,number,string] = ["Timi" , 27, "Nigeria"]
+
+let date:[number, number, number] = [2024, 6, 15]
+
+
+// Enums in TypeScript
+
+
+// enum ServerResponseStatus {
+//   Success = 200,
+//   Error = 'Error',
+// }
+
+// interface ServerResponse {
+//   result: ServerResponseStatus;
+//   data: string[];
+// }
+
+// function getServerResponse(): ServerResponse {
+//   return {
+//     result: ServerResponseStatus.Success,
+//     data: ['first item', 'second item'],
+//   };
+// }
+
+// const response: ServerResponse = getServerResponse();
+// console.log(response);
