@@ -51,22 +51,56 @@ let date:[number, number, number] = [2024, 6, 15]
 // Enums in TypeScript
 
 
-// enum ServerResponseStatus {
-//   Success = 200,
-//   Error = 'Error',
-// }
+enum ServerResponseStatus {
+  Success = 200,
+  Error = 'Error',
+}
 
-// interface ServerResponse {
-//   result: ServerResponseStatus;
-//   data: string[];
-// }
+interface ServerResponse {
+  result: ServerResponseStatus;
+  data: string[];
+}
 
-// function getServerResponse(): ServerResponse {
-//   return {
-//     result: ServerResponseStatus.Success,
-//     data: ['first item', 'second item'],
-//   };
-// }
+function getServerResponse(): ServerResponse {
+  return {
+    result: ServerResponseStatus.Success,
+    data: ['first item', 'second item'],
+  };
+}
 
-// const response: ServerResponse = getServerResponse();
-// console.log(response);
+const response: ServerResponse = getServerResponse();
+console.log(response);
+
+
+// Challenge
+
+enum  UserRole {
+    ADMIN,
+    Manager,
+    Employee
+}
+
+
+type User = {
+    id: number,
+    name: string,
+    role: UserRole,
+    contact : [string, string]
+}
+
+
+function createUser(user:User):User{
+   return {
+     ...user
+   }
+}
+
+const newUsers:User = createUser({
+    id: 1,
+    name: "Timi Maliki",
+    role: UserRole.ADMIN,
+    contact: ["Timi Maliki", "08034567890"]
+})
+
+console.log(newUsers)
+
