@@ -4,6 +4,7 @@ let someValue: any = 'This is a string';
 
 // Using type assertion to treat 'someValue' as a string
 let strLength: number = (someValue as string).length;
+console.log(strLength)
 
 type Bird = {
   name: string;

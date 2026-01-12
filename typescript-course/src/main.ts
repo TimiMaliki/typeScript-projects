@@ -8,6 +8,7 @@ import './course3.ts'
 import './course4.ts'
 import './course5.ts'
 import './course6.ts'
+import './course7.ts'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
