@@ -79,3 +79,24 @@ try {
     console.log('there was an error....');
   }
 }
+
+
+// Never Type in TypeScript
+
+
+// let someValue: never = 0;
+
+type Theme = 'light' | 'dark';
+
+function checkTheme(theme: Theme) {
+  if (theme === 'light') {
+    console.log('light theme');
+    return;
+  }
+  if (theme === 'dark') {
+    console.log('dark theme');
+    return;
+  }
+  theme;
+  // theme is of type never, because it can never have a value that is not 'light' or 'dark'.
+}
