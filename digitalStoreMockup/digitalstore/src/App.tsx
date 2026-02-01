@@ -7,7 +7,6 @@ import Checkout from './pages/Checkout'
 import PRODUCT from './productInfo'
 
 
-
 function Layout() {
   return (
     <>
