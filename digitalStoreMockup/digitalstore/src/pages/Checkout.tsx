@@ -1,9 +1,15 @@
+import ProductCard from "../component/ProductCard"
+import { Products } from '../types'
 
-type Props = {}
+type Props = {
+     product: Products
+}
 
-const Checkout = ({}: Props) => {
+const Checkout = ({product}: Props) => {
   return (
-    <div>Checkout</div>
+    <div>
+        <ProductCard product={product}/>
+    </div>
   )
 }
 

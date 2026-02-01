@@ -18,7 +18,7 @@ const Product = ({title,description,images}: Props) => {
     const navigate = useNavigate()
 
 const handlePayClick = () => {
-    navigate('./pages/Checkout')
+    navigate('/checkout')
 }
   return (
      <div className="grid place-content-center">
