@@ -5,7 +5,7 @@ const PRODUCT : Products = {
     id: 1,
   title: "Complete Web Development Bundle",
   description:
-    "Learn to build websites with HTML, CSS, Javascript, React, Node, and Mongo",
+    "Learn to build websites with HTML, CSS, Javascript, React, Node, and Mongo, Typescript",
   image: puzle,
   price: 12.99,
 }
