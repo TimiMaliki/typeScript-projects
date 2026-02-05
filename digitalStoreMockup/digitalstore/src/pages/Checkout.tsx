@@ -7,7 +7,7 @@ type Props = {
 
 const Checkout = ({product}: Props) => {
   return (
-    <div className='flex container mt-12'>
+    <div className='flex container mt-12 border border-black/50'>
         <ProductCard product={product}/>
     </div>
   )
